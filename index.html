@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Codeup Global</title>
+</head>
+
+<body>
+    <header class="bg-white">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex items-center gap-x-12">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img class="h-12 w-44" src="./assets/logo_white_new.png" alt="">
+                </a>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Usecases</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Resources</a>
+                </div>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex">
+                <a href="#" class="pt-2 px-1 text-sm font-semibold leading-6 text-gray-900">Follow Us:</a>
+                <img class="h-10 pt-0.5 w-auto mr-2" src="./assets/icons/linkedin.png" alt="">
+                <button type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Contact
+                    us</button>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div
+                class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-12 w-44" src="./assets/logo_white_new.png" alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Usecases</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Resources</a>
+                        </div>
+                        <div class="py-6">
+                            <div class="space-y-2 py-6"></div>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Follow
+                                us :</a>
+                            <button type="button"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Contact
+                                us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-1">
+        <p class="heading-1 ">Let’s Build the next big <br /> thing in <span class="blue-text">education</span> </p>
+        <div class="button-container shadow-md mt-4">
+            <form class="mt-10 max-w-md pt-1.5">
+                <div class="flex gap-x-4">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required
+                        class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900  placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                        placeholder="Your email">
+                    <button type="submit"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Get
+                        In Touch</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container-2 py-32">
+        <div class="mini-container-2">
+            <div class="block-container">
+                <div class="card-container">
+                    <img class="block-image" src="./assets/blocks/block1.png" alt="">
+                    <img class="block-image" src="./assets/blocks/block2.png" alt="">
+                </div>
+                <div class="card-container">
+                    <img class="block-image" src="./assets/blocks/block3.png" alt="">
+                    <img class="block-image" src="./assets/blocks/block4.png" alt="">
+                </div>
+            </div>
+            <div class="content-container-1">
+                <p class="big-font">
+                    <span class="yellow-text">From Vision to Reality:</span>
+                    <br />
+                    <span class="white-text">Our Transformative Journey</span>
+                </p>
+                <p class="normal-font white-text">
+                    From being an idea in your platter, until getting it in the hands of real world customer,
+                    witness the most sophisticated tech in play. From Wireframes to products,
+                    let CodeUp Global wave the Magic wand
+                </p>
+                <button type="submit"
+                    class="w-48 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                    Know More About Us</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-3">
+        <div class="sub-1-container-3">
+            <p class="red-font"> HOW WE DO IT?</p>
+            <p class="black-font">Technology we use</p>
+            <p class="grey-font">
+                At Codeupglobal, we specialize in providing innovative technological solutions tailored to your business
+                needs. Our team of experts is dedicated
+                to transforming your Ideas into products, leveraging cutting-edge technologies and industry
+                best practices. With a focus on delivering exceptional results, we offer services ranging from
+                software development and cloud computing to data analytics and AI solutions. Our client-centric
+                approach ensures that we understand your unique requirements, allowing us to deliver customized
+                solutions that drive growth and success
+
+            </p>
+            <button type="submit"
+                class="w-48 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                Know More About Us</button>
+        </div>
+        <div>
+            <img class="tech-image" src="./assets/techstack.svg" alt="">
+        </div>
+    </div>
+
+    <div class="about-container">
+        <img class="about-image" src="./assets/about.svg" alt="">
+        <div class="about-sub-1">
+            <p class="black-font"> About us</p>
+            <p class="grey-font">Founded with a vision to revolutionize the technological landscape, Codeupglobal has
+                evolved from a tech service providing company to a tech enabling company. Our strength lies
+                in our unwavering commitment to customer communication and optimizing time utilization
+                to build innovative products that drive business growth.</p>
+            <button type="submit"
+                class="w-32 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                Read more</button>
+        </div>
+    </div>
+    <div class="footer-form">
+        <p class="black-font white-text text-center">Looking To Learn More?</p>
+        <div class="form-continer-2 shadow-md">
+            <form class="p-1">
+                <div class="flex gap-x-4">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required
+                        class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900  placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                        placeholder="Your Name...">
+                    <input id="email-address" name="email" type="email" autocomplete="email" required
+                        class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900  placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                        placeholder="Your Phone Number...">
+                    <input id="email-address" name="email" type="email" autocomplete="email" required
+                        class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900  placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                        placeholder="Your email">
+                    <button type="submit"
+                        class="mt-0.5 w-32 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Get
+                        In Touch</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container flex">
+            <div class="footer-sub">
+                <img class="h-auto w-64" src="./assets/logo_white_new.png" alt="">
+                <p class="phone-mail-text flex"><img class="h-auto w-6 mr-2" src="./assets/icons/phone.svg" alt=""> +91
+                    234123333334</p>
+                <p class="phone-mail-text flex"><img class="h-auto w-6 mr-2" src="./assets/icons/mail.svg"
+                        alt="">abcd@codeuptech.com</p>
+            </div>
+            <div class="footer-sub">
+                <p class="footer-header">Quick Links</p>
+                <p class="footer-subheading">Blog</p>
+                <p class="footer-subheading">About Us</p>
+                <p class="footer-subheading">Jobs</p>
+                <p class="footer-subheading">Usecases</p>
+                <p class="footer-subheading">Publishes</p>
+                <p class="footer-subheading">Contact Us</p>
+            </div>
+            <div class="footer-sub">
+                <p class="footer-header">Services</p>
+                <p class="footer-subheading">Blog</p>
+                <p class="footer-subheading">About Us</p>
+                <p class="footer-subheading">Jobs</p>
+            </div>
+            <div class="footer-sub">
+                <div class="flex">
+                    <img class="h-6 w-6 mr-2" src="./assets/icons/location.svg" alt="">
+                    <p class="phone-mail-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad min
+                    </p>
+                </div>
+                <div class="gmaps-card">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="100%" height="100%" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=chennai&t=&z=10&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <a href="https://2yu.co">2yu</a><br>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            </style>
+                            <a href="https://embedgooglemap.2yu.co/">html embed google map</a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
