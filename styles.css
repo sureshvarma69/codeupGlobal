@@ -11,7 +11,7 @@
     width: 1408px;
     height: 520px;
     padding-top: 20px;
-    margin:auto;
+    margin: auto;
 }
 
 .container-2 {}
@@ -141,6 +141,25 @@
     margin: auto;
     display: flex;
     padding-left: 64px;
+    margin-bottom: 48px;
+}
+
+.container-4 {
+    width: 1232px;
+    height: 592px;
+    background: rgba(35, 97, 255, 0.12);
+    margin: auto;
+    border-radius: 18px;
+}
+
+.sub-1-container-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 480px;
+    height: 240px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .content-container-1 {
@@ -282,9 +301,196 @@
     width: 678.74365234375px;
     height: 250.67236328125px;
 }
-.city:nth-child(2){
+
+.city:nth-child(2) {
     margin-left: -40px;
 }
-.city-card{
-    margin-top: 42px;
+
+.city-card {
+    margin-top: -10px;
+}
+
+.white-cards {
+    width: 264px;
+    height: 208px;
+    border-radius: 24px;
+    background: #FFFFFF;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.white-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 48px 0px;
+}
+
+.white-card-content {
+    width: 200px;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #40444F;
+}
+
+.clients-container {
+    width: 100%;
+    height: 465px;
+    padding: 48px 0px;
+    background-image: url("./assets/clienBG.svg");
+    padding-top: 124px;
+}
+
+.progress-bg {
+    width: 100%;
+    height: 465px;
+    background: linear-gradient(rgba(217, 217, 217, 0), rgba(12, 58, 176, 0.08));
+    margin: 64px 0px;
+    border-radius: 36px;
+}
+
+.clients-container-images {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin-left: auto;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.container-progress {
+    display: flex;
+    max-width: 920px;
+    margin-left: auto;
+    padding: 32px 0px;
+    padding-top: 56px;
+    padding-left: 85px;
+}
+
+.progress {
+    width: 108px;
+    height: 108px;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 100px;
+    margin: 20px
+}
+
+.progress::after {
+    content: "%";
+    color: #2361FF;
+    font-family:" Visby CF";
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 31px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+}
+
+.progress .title {
+    position: relative;
+    z-index: 100;
+    color: #2361FF;
+    font-family: "Visby CF";
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 31px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+}
+
+.progress .overlay {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #2361FF;
+}
+
+.progress .left,
+.progress .right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 4px solid #2361FF;
+    ;
+    border-radius: 100px 0px 0px 100px;
+    border-right: 0;
+    transform-origin: right;
+    color: #2361FF;
+}
+
+.progress .left {
+    animation: load1 1s linear forwards;
+}
+
+.progress:nth-of-type(2) .right,
+.progress:nth-of-type(3) .right {
+    animation: load2 .5s linear forwards 1s;
+}
+
+.progress:last-of-type .right,
+.progress:first-of-type .right {
+    animation: load3 .8s linear forwards 1s;
+}
+
+@keyframes load1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes load2 {
+    0% {
+        z-index: 100;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        z-index: 100;
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes load3 {
+    0% {
+        z-index: 100;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        z-index: 100;
+        transform: rotate(315deg);
+    }
 }
