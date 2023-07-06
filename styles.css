@@ -345,6 +345,7 @@
     padding: 48px 0px;
     background-image: url("./assets/clienBG.svg");
     padding-top: 124px;
+    background-repeat: no-repeat;
 }
 
 .progress-bg {
