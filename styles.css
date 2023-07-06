@@ -5,6 +5,9 @@
     src: local('Visby CF'), url('./fonts/visbycf.otf') format('truetype');
 }
 
+body{
+    margin:0 auto;
+}
 
 .container-1 {
     background-image: url("./assets/landing.svg");
@@ -514,7 +517,12 @@
     display: none;
 }
 
-.slideshow-container2 {
+.slideshow-container-cust {
+    max-width: 720px;
+    position: relative;
+    margin: auto;
+}
+.slideshow-containerThree {
     max-width: 900px;
     position: relative;
     margin: auto;
@@ -524,6 +532,10 @@
 .mySlidesTwo {
     display: none;
 }
+.mySlidesThree {
+    display: none;
+}
+
 /* Next & previous buttons */
 .prev,
 .next {
@@ -589,6 +601,7 @@
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+
 .dot2 {
     cursor: pointer;
     height: 15px;
@@ -604,6 +617,7 @@
 .dot:hover {
     background-color: #717171;
 }
+
 .active,
 .dot2:hover {
     background-color: #717171;
@@ -697,9 +711,38 @@
     letter-spacing: 0.02em;
     text-align: left;
 }
-.ver-cnt{
-   display: flex;
-   flex-direction: row;  
-   justify-content: space-around;
-   gap: 24px;
+
+.ver-cnt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+/* customer carousel */
+
+.carousel-card-cust {
+    width: 704px;
+    height: 424px;
+    border-radius: 40px;
+    background: #F4F4F6;
+}
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    max-width: 360px;
+    padding-top:72px;
+}
+.add-up-space{
+   
+}
+.firstQuo{
+    margin-top: -64px;
+    margin-left: 48px;
+}
+.secondQuo{
+    margin-top: 356px;
+    margin-right: 48px;
+    /* margin-bottom: -64px; */
 }
