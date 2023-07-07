@@ -96,4 +96,27 @@ function loadcarousel(){
     showSlides(1);
     showSlides2(1);
     showSlides3(1);
+    closeMenu();
+}
+
+
+
+
+let toggleBtn = document.querySelector("#navbar-toggle");
+let collapse = document.querySelector("#navbar-collapse");
+
+toggleBtn.onclick = () => {
+  collapse.classList.toggle("hidden");
+  collapse.classList.toggle("flex");
+};
+
+
+function closeMenu(){
+    console.log("menuclosed");
+    document.querySelector(".menuitem").style.display="none";
+}
+
+function openMenu(){
+    console.log("menuopened");
+    document.querySelector(".menuitem").style.display="block";
 }

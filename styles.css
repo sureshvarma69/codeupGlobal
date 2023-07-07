@@ -5,8 +5,8 @@
     src: local('Visby CF'), url('./fonts/visbycf.otf') format('truetype');
 }
 
-body{
-    margin:0 auto;
+body {
+    margin: 0 auto;
 }
 
 .container-1 {
@@ -256,7 +256,8 @@ body{
 }
 
 .footer-container {
-    width: 1232px;
+    width: 100%;
+    max-width: 1232px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -522,6 +523,7 @@ body{
     position: relative;
     margin: auto;
 }
+
 .slideshow-containerThree {
     max-width: 900px;
     position: relative;
@@ -532,6 +534,7 @@ body{
 .mySlidesTwo {
     display: none;
 }
+
 .mySlidesThree {
     display: none;
 }
@@ -727,22 +730,222 @@ body{
     border-radius: 40px;
     background: #F4F4F6;
 }
-.profile-card{
+
+.profile-card {
     display: flex;
     flex-direction: column;
-    gap:12px;
+    gap: 12px;
     max-width: 360px;
-    padding-top:72px;
+    padding-top: 72px;
 }
-.add-up-space{
-   
-}
-.firstQuo{
+
+.add-up-space {}
+
+.firstQuo {
     margin-top: -64px;
     margin-left: 48px;
 }
-.secondQuo{
+
+.secondQuo {
     margin-top: 356px;
     margin-right: 48px;
     /* margin-bottom: -64px; */
+}
+
+
+/* responsive design */
+@media only screen and (max-width: 1180px) {
+    .about-container {
+        width: auto;
+        flex-flow: wrap;
+        justify-content: space-around;
+        padding: 48px 18px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container-1 {
+        background-image: url("./assets/landing.svg");
+        width: 100%;
+        height: auto;
+    }
+
+    .mini-container-2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .container-3 {
+        width: 100%;
+    }
+
+    .ver-cnt {
+        flex-direction: column;
+    }
+
+    .ver-carousel-card {
+        width: 100%;
+        height: auto;
+        justify-content: space-around;
+    }
+
+    .container-4 {
+        flex-direction: column;
+        height: auto;
+        padding: 24px 12px;
+        width: 100%;
+
+    }
+
+    .sub-1-container-4 {
+
+        height: auto;
+    }
+
+    .white-cards-container {
+        max-width: 480px;
+        margin: auto;
+
+    }
+
+    .clients-container {
+        background-image: none;
+        height: auto;
+    }
+
+    .clients-container-images {
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .carousel-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .carousel-width {
+        width: auto;
+        height: auto;
+
+    }
+
+    .carousel-card-cust {
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
+
+    .form-continer-2 {
+        height: auto;
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .about-sub-1 {
+        padding: 24px 12px;
+    }
+
+    .form-card {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container-progress {
+        flex-flow: wrap;
+    }
+
+    .carousel-width {
+        display: none;
+
+    }
+
+    .form-card {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .footer-form {
+        height: auto;
+
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-container {
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+    .footer-sub{
+      width:240px;
+      height:auto;
+      padding:24px 0px;
+    }
+    .footer-sub:first-child{
+        width:240px;
+        height:auto;
+        padding: 0px;
+        padding-bottom: 18px;
+      }
+
+    .content-container-1 {
+        width:90%;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .container-3 {
+        flex-direction: column;
+    }
+
+    .mini-container-2 {
+        flex-direction: column;
+    }
+
+    .firstQuo {
+        margin-top: -24px;
+        margin-left: 48px;
+    }
+
+    .secondQuo {
+        margin-top: 326px;
+        margin-right: 48px;
+        /* margin-bottom: -64px; */
+    }
+
+    .white-cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .about-image{
+        width:90%;
+        height: auto;
+    }
+    .ver-crl-image {
+        width:100%;
+        height:auto;
+    }
+    .ver-crl-container{
+        width:90%;
+        margin: auto;
+    }
+    .about-container{
+        margin-bottom: 64px;;
+    }
+    .clients-container{
+        height: auto;
+    }
+    .progress-bg{
+        height: auto;
+    }
+    .clients-container-images{
+        gap:24px;
+    }
 }

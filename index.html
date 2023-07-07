@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" type="image/x-icon" href="./assets/icons/logo.svg">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./index.js"></script>
+    <script src="./index.js" ></script>
     <script>
         tailwind.config = {
             theme: {
@@ -38,9 +38,11 @@
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Resources</a>
                 </div>
             </div>
-            <div class="flex lg:hidden">
-                <button type="button"
-                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <div class="lg:hidden">
+                <button type="button" 
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    onclick="openMenu()"
+                    >
                     <span class="sr-only">Open main menu</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                         aria-hidden="true">
@@ -60,15 +62,15 @@
         <!-- Mobile menu, show/hide based on menu open state. -->
         <div class="lg:hidden" role="dialog" aria-modal="true">
             <!-- Background backdrop, show/hide based on slide-over state. -->
-            <div class="fixed inset-0 z-10"></div>
+            <div class="fixed  z-10"></div>
             <div
-                class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                class=" menuitem fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div class="flex items-center justify-between">
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">Your Company</span>
                         <img class="h-12 w-44" src="./assets/icons/logo.svg" alt="">
                     </a>
-                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" onclick="closeMenu()">
                         <span class="sr-only">Close menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                             aria-hidden="true">
@@ -571,7 +573,7 @@
         <p class="black-font white-text text-center">Looking To Learn More?</p>
         <div class="form-continer-2 shadow-md">
             <form class="p-1">
-                <div class="flex gap-x-4">
+                <div class="flex gap-x-4 form-card">
                     <label for="email-address" class="sr-only">Email address</label>
                     <input id="email-address" name="email" type="email" autocomplete="email" required
                         class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900  placeholder:text-gray-400 sm:text-sm sm:leading-6"
