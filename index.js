@@ -1,8 +1,9 @@
+
 /// carousel 1
 let slideIndex = 1;
 let slideIndex2 = 1;
 let slideIndex3 = 1;
-
+MicroModal.init({});
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -120,3 +121,4 @@ function openMenu(){
     console.log("menuopened");
     document.querySelector(".menuitem").style.display="block";
 }
+
