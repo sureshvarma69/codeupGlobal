@@ -915,7 +915,9 @@ body {
 
 @media only screen and (max-width: 500px) {
 
-
+    .button-resp-auto{
+        width: auto;
+    }
     .carousel-width {}
 
     .carousel-content {
