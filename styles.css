@@ -919,7 +919,8 @@ body {
     .carousel-width {}
 
     .carousel-content {
-        padding: 24px 16px;
+        padding: 24px;
+        margin-left: -4px;
     }
 
     .resp-text-center {
@@ -930,6 +931,7 @@ body {
         flex-direction: column;
         border-radius: 24px;
         padding-bottom: 4px;
+        max-width: 98%;
     }
 
     .carousel-card-cust {
