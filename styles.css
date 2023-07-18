@@ -104,7 +104,7 @@ body {
 }
 
 .black-font {
-    font-family: "Visby CF";
+    /* font-family: "Visby CF"; */
     font-size: 40px;
     font-weight: 700;
     line-height: 40px;
@@ -362,8 +362,14 @@ body {
     border-radius: 36px;
 }
 
+.marquee-img {
+    display: flex;
+    gap: 48px;
+}
+
 .clients-container-images {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     max-width: 960px;
     margin-left: auto;
@@ -392,8 +398,8 @@ body {
 }
 
 .progress {
-    width: 108px;
-    height: 108px;
+    width: 128px;
+    height: 128px;
     font-size: 30px;
     color: #fff;
     border-radius: 50%;
@@ -739,6 +745,7 @@ body {
     gap: 12px;
     max-width: 360px;
     padding-top: 72px;
+    margin: auto;
 }
 
 .add-up-space {}
@@ -816,7 +823,7 @@ body {
     }
 
     .clients-container {
-        background-image: none;
+        /* background-image: none; */
         /* margin-top: auto; */
         height: auto;
         /* background-attachment: fixed !important;
@@ -912,29 +919,53 @@ body {
     display: none;
 }
 
+.percent {
+    font-family: "Visby CF";
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    margin-bottom: 18px;
+    color: #40444F;
+}
 
 @media only screen and (max-width: 500px) {
+    .black-font{
+        padding: 0 16px;
+    }
+    .container-progress {
+        margin: 0;
+        padding: 32px;
+        display: flex;
+        justify-content: space-around;
+    }
 
-    .phone-mail-text{
+    .phone-mail-text {
         flex-direction: column;
         text-align: center;
     }
-    .phone-mail-text img{
+
+    .phone-mail-text img {
         margin: auto;
         margin-bottom: 8px;
     }
-    .address{
+
+    .address {
         flex-direction: column;
         margin-top: -18px;
         margin-bottom: 24px;
     }
-    .address img{
+
+    .address img {
         margin: auto;
         margin-bottom: 8px;
     }
-    .button-resp-auto{
+
+    .button-resp-auto {
         width: auto;
     }
+
     .carousel-width {}
 
     .carousel-content {
@@ -1097,7 +1128,8 @@ body {
     }
 
     .clients-container {
-        height: auto;
+        height: 1000px;
+        background-position: bottom left;
     }
 
     .progress-bg {
@@ -1304,4 +1336,100 @@ summary::-webkit-details-marker {
 
 .modal[aria-hidden='true'] {
     display: none;
+}
+
+/* banner */
+
+
+/*photobanner*/
+
+.photobanner {}
+
+/*keyframe animations*/
+.first {
+    -webkit-animation: bannermove 50s linear infinite;
+    -moz-animation: bannermove 50s linear infinite;
+    -ms-animation: bannermove 50s linear infinite;
+    -o-animation: bannermove 50s linear infinite;
+    animation: bannermove 50s linear infinite;
+}
+
+@keyframes bannermove {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: -5746px;
+    }
+
+}
+
+@-moz-keyframes bannermove {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: -5746px;
+    }
+
+}
+
+@-webkit-keyframes bannermove {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: -5746px;
+    }
+
+}
+
+@-ms-keyframes bannermove {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: -5746px;
+    }
+
+}
+
+@-o-keyframes bannermove {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: -5746px;
+    }
+
+}
+
+.photobanner {
+    z-index: -10;
+}
+
+.photobanner img {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.photobanner img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
