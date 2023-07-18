@@ -2,6 +2,7 @@
 /// carousel 1
 let slideIndex = 1;
 let slideIndex2 = 1;
+let slideIndex2Resp = 1;
 let slideIndex3 = 1;
 MicroModal.init({});
 // Next/previous controls
@@ -64,6 +65,32 @@ function showSlides2(n) {
 }
 
 
+function plusSlides2Resp(n) {
+  showSlides2Resp(slideIndex2Resp += n);
+}
+
+// Thumbnail image controls
+function currentSlide2Resp(n) {
+  showSlides2Resp(slideIndex2Resp = n);
+}
+
+function showSlides2Resp(n) {
+  let i;
+  let slides2Resp = document.getElementsByClassName("mySlidesTwoResp");
+  let dots2 = document.getElementsByClassName("dot2");
+  if (n > slides2Resp.length) {slideIndex2Resp = 1}
+  if (n < 1) {slideIndex2Resp = slides2Resp.length}
+  for (i = 0; i < slides2Resp.length; i++) {
+    slides2Resp[i].style.display = "none";
+  }
+  // for (i = 0; i < dots2.length; i++) {
+  //   dots2[i].className = dots2[i].className.replace(" active", "");
+  // }
+  slides2Resp[slideIndex2Resp-1].style.display = "block";
+//   dots2[slideIndex2-1].className += " active";
+}
+
+
 function plusSlides3(n) {
     showSlides3(slideIndex3 += n);
   }
@@ -96,6 +123,7 @@ showSlides2(slideIndex2);
 function loadcarousel(){
     showSlides(1);
     showSlides2(1);
+    showSlides2Resp(1);
     showSlides3(1);
     closeMenu();
 }

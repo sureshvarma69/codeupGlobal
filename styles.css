@@ -542,6 +542,9 @@ body {
 .mySlidesTwo {
     display: none;
 }
+.mySlidesTwoResp {
+    display: none;
+}
 
 .mySlidesThree {
     display: none;
@@ -933,6 +936,12 @@ body {
 @media only screen and (max-width: 500px) {
     .black-font{
         padding: 0 16px;
+    }
+    .sub-1-container-3{
+        margin-top: 24px;
+    }
+    .small-hidden{
+      display: none;
     }
     .container-progress {
         margin: 0;
