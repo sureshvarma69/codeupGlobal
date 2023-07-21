@@ -11,11 +11,11 @@ body {
 
 .container-1 {
     background-image: url("./assets/landing.svg");
-    width: 1408px;
+    width: auto;
     height: 520px;
     padding: 0px 24px;
     padding-top: 20px;
-    margin: auto;
+    margin: auto 24px;
 
 }
 
