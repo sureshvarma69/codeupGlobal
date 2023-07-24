@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/logo.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Codeup</title>
+</head>
+
+<body>
+    <header class="bg-white">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex items-center gap-x-12">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img class="h-12 w-44" src="./assets/icons/logo.svg" alt="">
+                </a>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Usecases</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Resources</a>
+                </div>
+            </div>
+            <div class="lg:hidden">
+                <button type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    onclick="openMenu()">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex">
+                <a href="#" class="pt-2 px-1 text-sm font-semibold leading-6 text-gray-900">Follow Us:</a>
+                <a href="https://www.linkedin.com/company/codeupglobalsolution/mycompany/?viewAsMember=true"
+                    target="_blank"><img class="h-10 pt-0.5 w-auto mr-2" src="./assets/icons/in.svg" alt=""></a>
+                <button type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Contact
+                    us</button>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed  z-10"></div>
+            <div
+                class=" menuitem fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-12 w-44" src="./assets/icons/logo.svg" alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" onclick="closeMenu()">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Usecases</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Resources</a>
+                        </div>
+                        <div class="py-6">
+                            <div class="space-y-2 py-6"></div>
+                            <div class="flex">
+                                <a href="#"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Follow
+                                    us : </a>
+                                <a href="https://www.linkedin.com/company/codeupglobalsolution/mycompany/?viewAsMember=true"
+                                    target="_blank"><img class="h-10 pt-0.5 w-auto mr-2" src="./assets/icons/in.svg"
+                                        alt=""></a>
+                            </div>
+                            <button type="button"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Contact
+                                us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+  
+        <img src="./assets/about-landing.svg" class="mx-auto mt-4"/>
+    
+
+
+    <div class="w-full py-8">
+        <p class="red-font text-center">TRUSTED BY</p>
+        <marquee direction="left" class="clients-container-images py-6" style="max-width: 100%;">
+            <div class="marquee-img" style="gap:64px;">
+                <img class="w-auto h-12 hover:scale-125 transition duration-500" src="./assets/clients/alpl.svg" alt="">
+                <img class="w-auto h-12 hover:scale-125 transition duration-500" src="./assets/clients/cxs.svg" alt="">
+                <img class="w-auto h-12 hover:scale-125 transition duration-500" src="./assets/clients/clematis.svg"
+                    alt="">
+                <img class="w-auto h-12 hover:scale-125 transition duration-500" src="./assets/clients/vet.svg" alt="">
+                <img class="w-auto h-12 hover:scale-125 transition duration-500" src="./assets/clients/taras.svg"
+                    alt="">
+                <img class="w-auto h-12 hover:scale-125 transition duration-500" src="./assets/clients/agraga.svg"
+                    alt="">
+            </div>
+
+        </marquee>
+    </div>
+
+    <div class="w-full py-8">
+        <p class="red-font text-center">KNOW US</p>
+        <p class="black-font text-center py-6">About Codeup</p>
+        <p class="grey-font text-center px-2" style="max-width:1156px;margin: auto;">
+            To get to your destination, you need to take steps in the right direction.
+            Marketing doesn’t start with marketing! It begins with understanding the target market,
+            creating the right customer persona, and analyzing the demand as well as suitable options.
+            We understand that and thus, rather than simply hopping on the Digital marketing bandwagon,
+            we give your business a much-needed
+            ‘Strategic Push’ through integrated marketing methods
+        </p>
+        <div class="flex justify-around py-24" style="max-width:1200px;margin: auto;">
+            <div class="about-white-cards shadow-md">
+                <img src="./assets/price.svg" class="about-img" />
+                <p class="black-font py-4" style="font-size: 20px;">Best Price Guarenteed</p>
+            </div>
+            <div class="about-white-cards shadow-md">
+                <img src="./assets/support.svg" class="about-img" />
+                <p class="black-font py-4" style="font-size: 20px;">Best Support</p>
+            </div>
+            <div class="about-white-cards shadow-md">
+                <img src="./assets/team.svg" class="about-img" />
+                <p class="black-font py-4" style="font-size: 20px;">Proffesional Team</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div style="max-width: 1232px;">
+        <img src="./assets/birds.svg" class="birds-img" />
+    </div> -->
+
+    <div class="news-letter flex justify-between">
+        <img src="./assets/blue-ellipse.svg" />
+        <img src="./assets/birds.svg" class="birds-img" />
+        <img src="./assets/pink-ellipse.svg" style="margin-top: 120px;" />
+    </div>
+    <div class="news-letter-card ">
+        <p class="black-font"style="color: #FFFFFF;" >
+            Subscribe <br />
+            for our daily newsletter <span style="font-family: sans-serif;">!</span>
+        </p>
+        <div class="form-continer-news shadow-md ">
+            <form class="p-1">
+                <div class="flex gap-x-2">
+                    <input id="email-address" name="email" type="email" autocomplete="email" required
+                        class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900  placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                        placeholder="Your Mail Id">
+                    <button type="submit"
+                        class="button-resp mt-0.5 w-32 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                        Subscribe
+                        </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container flex">
+            <div class="footer-sub pt-8">
+                <img class="h-auto w-64" src="./assets/icons/logo.svg" alt="">
+
+                <details class="lg:hidden question py-4 border-b border-grey-lighter mt-10">
+
+                    <summary class="flex items-center footer-header">Quick Links
+                        <button class="ml-auto">
+                            <svg class="rotate-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.5"
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    stroke="#24272D" stroke-width="1.5" />
+                                <path d="M15 10.5L12 13.5L9 10.5" stroke="#24272D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
+                    </summary>
+
+                    <div class="footer-sub mt-4">
+                        <p class="footer-subheading">Blog</p>
+                        <p class="footer-subheading">About Us</p>
+                        <p class="footer-subheading">Jobs</p>
+                        <p class="footer-subheading">Usecases</p>
+                        <p class="footer-subheading">Publishes</p>
+                        <p class="footer-subheading">Contact Us</p>
+                    </div>
+                </details>
+                <details class="lg:hidden mb-4 question py-4 border-b border-grey-lighter mb-8">
+
+                    <summary class="flex items-center footer-header">Services
+                        <button class="ml-auto">
+                            <svg class="rotate-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.5"
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    stroke="#24272D" stroke-width="1.5" />
+                                <path d="M15 10.5L12 13.5L9 10.5" stroke="#24272D" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
+                    </summary>
+
+                    <div class="footer-sub mt-4">
+                        <p class="footer-subheading">Blog</p>
+                        <p class="footer-subheading">About Us</p>
+                        <p class="footer-subheading">Jobs</p>
+                    </div>
+                </details>
+                <div class="modal lg:hidden micromodal-slide" id="modal-1" aria-hidden="true">
+                    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title"
+                            aria-describedby="modal-1-content">
+                            <div role="document">
+                                <header class="modal__header">
+                                    <h3 class="modal__title" id="modal-1-title">
+                                        Micromodal
+                                    </h3>
+
+                                    <button aria-label="Close modal" aria-controls="modal__container1"
+                                        data-micromodal-close type="button"
+                                        class="modal__close rounded-md text-gray-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-white">
+                                        <span class="sr-only">Close panel</span>
+
+                                    </button>
+                                </header>
+                                <main class="modal__content" id="modal-1-content">
+                                    <p>
+                                        Try hitting the <code>tab</code> key and notice how the focus stays within the
+                                        modal itself. Also, <code>esc</code> to close modal.
+                                    <figure>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkJ7tBSCRBMpGm8XDTdmHLBIH9ah1YWeixrUwFby0ok6co7jux"
+                                            alt="">
+                                    </figure>
+                                    </p>
+                                </main>
+                                <footer class="modal__footer">
+                                    <button class="modal__btn modal__btn-primary">Continue</button>
+                                    <button class="modal__btn" data-micromodal-close
+                                        aria-label="Close this dialog window">Close</button>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="phone-mail-text flex"><img class="h-auto w-6 mr-2" src="./assets/icons/phone.svg" alt="">+91
+                    93634 63195</p>
+                <a href="mailto:info@codeupglobal.com" target="_blank" class="phone-mail-text flex"><img
+                        class="h-auto w-6 mr-2" src="./assets/icons/mail.svg" alt="">info@codeupglobal.com</a>
+            </div>
+            <div class="footer-sub img-resp-hide ">
+                <p class="footer-header">Quick Links</p>
+                <p class="footer-subheading">Blog</p>
+                <p class="footer-subheading">About Us</p>
+                <p class="footer-subheading">Jobs</p>
+                <p class="footer-subheading">Usecases</p>
+                <p class="footer-subheading">Publishes</p>
+                <p class="footer-subheading">Contact Us</p>
+            </div>
+            <div class="footer-sub img-resp-hide ">
+                <p class="footer-header">Services</p>
+                <p class="footer-subheading">Blog</p>
+                <p class="footer-subheading">About Us</p>
+                <p class="footer-subheading">Jobs</p>
+            </div>
+            <div class="footer-sub">
+                <div class="flex address">
+                    <img class="h-6 w-6 mr-2" src="./assets/icons/location.svg" alt="">
+                    <p class="phone-mail-text">
+                        431, Workafella HighStreet, Teynampet, Chennai - 600018
+                    </p>
+                </div>
+                <div class="gmaps-card">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="100%" height="100%" id="gmap_canvas"
+                                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=431, Workafella HighStreet, Teynampet, Chennai - 600018&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <a href="https://2yu.co">2yu</a><br>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            </style>
+                            <a href="https://embedgooglemap.2yu.co/">html embed google map</a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
