@@ -372,8 +372,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 960px;
-    margin-left: auto;
+    /* max-width: 960px; */
+    margin-left: 15vw;
 }
 
 * {
@@ -936,8 +936,16 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+    .clients-container-images {
+        margin-left: 0;
+    }
+
     .black-font {
         padding: 0 16px;
+    }
+
+    .container-1 {
+        margin: 0;
     }
 
     .sub-1-container-3 {
@@ -1562,4 +1570,79 @@ summary::-webkit-details-marker {
     position: relative;
     margin-top: -200px;
     margin-right: 36px;
+}
+
+
+/* contact us pop up */
+.popup-card {
+    border-radius: 20px !important;
+}
+
+.contact-us-popup {
+    display: flex;
+
+}
+
+.contact-form {
+    width: 360px;
+    height: 450px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    padding-top: 48px;
+}
+
+.contact-small-text {
+    /* font-family: "Work Sans"; */
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #525766;
+    margin-bottom: 4px;
+
+}
+
+.close-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.icon-container {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.contact-profile-desc {
+    font-family: "Visby CF";
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 18px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #FFFFFF;
+    padding:8px 12px;
+}
+.desc-contact{
+    
+}
+.popup-contact-form{
+    display: none;
+}
+
+.contact-person {
+    background-image: url("./assets/contactProfile.svg");
+    width: 360px;
+    height: 464px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom:12px;
 }
